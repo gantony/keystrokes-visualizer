@@ -15,6 +15,9 @@ public:
 
 protected:
 
+private slots:
+    void onCbStateChanged(int state);
+
 private:
     Model *model;
 };

@@ -30,7 +30,8 @@ public:
     bool eventFilter(QObject *object, QEvent *event);
 
     void onKeyPressed(int code, const QString &text);
-
+    void limitToLast(int number);
+    void showEverything();
 
 signals:
 
@@ -38,6 +39,8 @@ public slots:
 
 private:
     QVector<Event> events;
+    bool onlyShowLasts;
+    int numToShow;
 };
 
 #endif // MODEL_H
